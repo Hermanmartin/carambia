@@ -1,0 +1,327 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+main {
+
+    background-image: url("../img/anto.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+/*como hago para que cada link navege dentro de la misma pagina*/
+/* como era para que me abra otra pestana cuando accedo a link*/
+.indiceUl a {
+    color: black;
+    font-weight: bold;
+}
+
+li {
+    list-style: none;
+    
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+.logoMovere {
+    display: flex;
+    padding-top: 10px;
+    padding-left: 50px;
+}
+
+.indice {
+    height: min-content;
+    display: flex;
+
+    align-self: end;
+    padding-right: 70px;
+}
+
+.indiceUl{
+    display: flex;
+    gap: 20px;
+    
+}
+
+.indiceUl a{
+   
+    text-decoration: none;
+
+}
+.seccion1{
+
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+    grid-template-areas: "empty text";
+    
+}
+
+/*
+.capaNegra{
+    z-index: 3;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    opacity: 0.60;
+}*/
+
+.contenedorTxt {
+    grid-area: text;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+
+}
+
+
+.hola{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 20px;
+    height: 25rem;
+    width: 60%;
+    text-align: center;
+    margin-bottom: 90px;
+    gap: 20px;
+    
+    
+}
+.hola h2 {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    
+    
+    
+}
+.parrafo {
+    color: white;
+    font-weight: bold;
+    
+}
+
+.navegador ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /*no me toma el aling item o aling content*/
+    padding-top: 10px;
+    padding-right: 30px;
+}
+
+.navegador img {
+    height: 28px;
+    
+}
+
+
+/*seccion 2*/
+/*en esta seccion me falta alinear el video con el texo para que quede estetico*/
+.seccion2 {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(16, 22, 22);
+    color: white;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "inicios  video";
+
+}
+
+.contenedorInicios{
+    grid-area: inicios;
+    height: 80vh;
+    width: 100%;
+
+    text-align: center;
+    align-self: center;
+    /*cual es la mejor forma de separar el titulo parrafo y boton*/
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+     
+    
+}
+
+
+/*estilos copiados de boton*/
+button {
+    color: white;
+    padding: 17px 40px;
+    border-radius: 50px;
+    border: 0;
+    background-color: rgb(29, 28, 28);
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all .5s ease;
+    
+}
+   
+button:hover {
+    letter-spacing: 3px;
+    background-color: hsl(138, 98%, 50%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(11, 236, 75) 0px 7px 29px 0px;
+}
+   
+button:active {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
+.contenedorVideo {
+    grid-area: video;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedorVideo video {
+    width: 80%;
+    filter: drop-shadow(50px 50px 50px 50px rgb(245, 243, 243));
+}
+
+.seccion3 {
+    height: 100vh;
+    width: 100%;
+    background: rgb(27, 26, 26);
+    gap: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "titular1 titular2 titular3 titular3 titular3 titular4"
+                         "card1  card2  card3  card4  card5  card6"
+                         "card7  card8  card9  card10  card11  card12 ";
+
+}
+/*como hacer para que esta parte de la seccion sea mas chica*/
+.gestion {
+    grid-area: titular1;
+}
+.gestion h2{
+    color: white;
+    font-weight: bold;
+}
+/*estilos card en general*/
+/*como alineo a los p entre si*/
+.card {
+    text-align: center;
+    padding: 5px 8px 5px 8px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.card p {
+    font-size: 12px;
+    display: flex;
+    
+    
+}
+/*card0 piramide*/
+.piramide {
+    grid-area: titular3;
+    color: white;
+    background-image: url(../img/piramide\ atardecer.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*card1 adoquinamiento*/
+.adoquinamiento {
+    grid-area: card1;
+    color: white;
+    background-image: url(../img/asfalto.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*card2 mate*/
+.nuestroMate {
+    grid-area: card2;
+    color: white;
+    background-image: url(../img/plaza\ del\ mate.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*card3 centro*/
+.centro {
+    grid-area: card3;
+    color: white;
+}
+/*card4 perez janeiro*/
+.perezJaneiro {
+    grid-area: card4;
+    color: white;
+    background-image: url(../img/plazaperez.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*card5 gas*/
+.gas {
+    grid-area: card5;
+    color: white;
+}
+/*card6 avenida*/
+.avenida {
+    grid-area: card6;
+    color: white;
+}
+/*card7 tehuelche*/
+.tehuelche {
+    grid-area: card7;
+    color: white;
+}
+/*card8 esculturas del deporte*/
+.esculturasDeporte {
+    grid-area: card8;
+    color: white;
+}
+/*card9 centro cultural*/
+.centroCultural {
+    grid-area: card9;
+    color: white;
+}
+/*card10 infraestructura deporte*/
+.infraestructuraDeporte {
+    grid-area: card10;
+    color: white;
+}
+/*card11 flota*/
+.flota {
+    grid-area: card11;
+    color: white;
+}
+/*card12 led*/
+.led {
+    grid-area: card12;
+    color: white;
+}
